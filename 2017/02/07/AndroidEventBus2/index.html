@@ -226,7 +226,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
-        
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#事件接收函数注解类-Subscriber"><span class="post-toc-number">1.</span> <span class="post-toc-text">事件接收函数注解类(Subscriber)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#事件执行线程枚举类-ThreadMode"><span class="post-toc-number">2.</span> <span class="post-toc-text">事件执行线程枚举类 (ThreadMode)</span></a></li></ol>
 
         <!--
         <li class="mdl-menu__item">
@@ -372,7 +372,7 @@
                 <!-- Post Content -->
                 <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>##事件接收函数注解类(Subscriber)<br>为什么要先从这个类开始读呢?因为这个事件注解类是我们在使用 <a href="https://github.com/hehonghui/AndroidEventBus" target="_blank" rel="external">AndroidEventBus</a> 的时候需要经常使用的类,也是对于像我这样的新手接触的较少的一个新东西,所以就优先从这个注解类开始阅读吧.</p>
+        <h2 id="事件接收函数注解类-Subscriber"><a href="#事件接收函数注解类-Subscriber" class="headerlink" title="事件接收函数注解类(Subscriber)"></a>事件接收函数注解类(Subscriber)</h2><p>为什么要先从这个类开始读呢?因为这个事件注解类是我们在使用 <a href="https://github.com/hehonghui/AndroidEventBus" target="_blank" rel="external">AndroidEventBus</a> 的时候需要经常使用的类,也是对于像我这样的新手接触的较少的一个新东西,所以就优先从这个注解类开始阅读吧.</p>
 <ul>
 <li>示例<br>使用 <a href="https://github.com/hehonghui/AndroidEventBus" target="_blank" rel="external">AndroidEventBus</a>的时候经常会使用如下代码:<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@Subscriber(tag = &quot;my_tag&quot;, mode = ThreadMode.ASYNC)</div><div class="line">private void updateUserAsync(User user) &#123;   </div><div class="line">    Log.e(&quot;Jin&quot;, user.getName() + &quot;, thread name = &quot; + Thread.currentThread().getName());</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
@@ -385,7 +385,7 @@
 <ul>
 <li>代码分析<br>Subscriber 类中的代码量十分的少,但是如果对注解一无所知的时候就会看的一头雾水<br>可以看到这个注解类其实和接口的书写方式十分相似,甚至可以说注解就是一种另类的接口, Subscriber 注解类中只有两个方法 tag() 和 mode()<br>1.tag() 此方法返回一个字符串 (事件标识符),默认值为 EventType.DEFAULT_TAG<br>2.mode()  此方法返回一个 ThreadMode 枚举(事件执行线程),默认值为ThreadMode.MAIN</li>
 </ul>
-<p>##事件执行线程枚举类 (ThreadMode)<br>这个类是个枚举类,在 Subscriber 类中使用过,基本作用:标识一个订阅者的事件执行在那个线程中<br>订阅事件可以执行在三种线程中:<br>1.MAIN 主线程<br>2.POST 发布线程,即你这个事件是在哪个线程发布的,就会在那个线程执行<br>3.ASYNC 子线程,事件将会执行在子线程中</p>
+<h2 id="事件执行线程枚举类-ThreadMode"><a href="#事件执行线程枚举类-ThreadMode" class="headerlink" title="事件执行线程枚举类 (ThreadMode)"></a>事件执行线程枚举类 (ThreadMode)</h2><p>这个类是个枚举类,在 Subscriber 类中使用过,基本作用:标识一个订阅者的事件执行在那个线程中<br>订阅事件可以执行在三种线程中:<br>1.MAIN 主线程<br>2.POST 发布线程,即你这个事件是在哪个线程发布的,就会在那个线程执行<br>3.ASYNC 子线程,事件将会执行在子线程中</p>
 <blockquote>
 <p>关于注解我也只是一知半解,所以特意去看了一下:<br><a href="http://gityuan.com/2016/01/23/java-annotation/" target="_blank" rel="external">http://gityuan.com/2016/01/23/java-annotation/</a><br><a href="http://blog.csdn.net/wzgiceman/article/details/53406248" target="_blank" rel="external">http://blog.csdn.net/wzgiceman/article/details/53406248</a><br>感谢这些分享者,知识需要分享,我也在为能分享出对大家有用的知识而努力.</p>
 </blockquote>
@@ -411,21 +411,13 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2017/02/07/AndroidEventBus1/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2017/02/07/hello-world/" id="post_nav-older" class="next-content">
+        <a href="/2017/02/07/AndroidEventBus1/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
