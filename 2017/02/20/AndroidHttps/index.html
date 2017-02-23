@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.2.6 -->
+
+    <!-- Title -->
+    
+    <title>
+        
+            关于 Android 使用 HTTPS 的学习记录 | 
+        
+        Jin.Blog
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" sizes="192x192" href="/img/favicon.png">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Meta & Info -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0097A7">
+    <meta name="author" content="Jin">
+    <meta name="description" content="һ�� Android ����Ա�ļ��±�">
+    <meta name="keywords" content="null">
+
+    <!--iOS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Jin.Blog">
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://www.jinblog.link">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="关于 Android 使用 HTTPS 的学习记录 | Jin.Blog">
+    <meta property="og:description" content="һ�� Android ����Ա�ļ��±�">
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import CSS -->
+    <link rel="stylesheet" href="/css/material.min.css">
+    <link rel="stylesheet" href="/css/style.min.css">
+    <!-- Config CSS -->
+
+
+<!-- Other Styles -->
+<style>
+    body, html {
+        font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    }
+
+    a {
+        color: #00838F;
+    }
+
+    .mdl-card__media,
+    #search-label,
+    #search-form-label:after,
+    #scheme-Paradox .hot_tags-count,
+    #scheme-Paradox .sidebar_archives-count,
+    #scheme-Paradox .sidebar-colored .sidebar-header,
+    #scheme-Paradox .sidebar-colored .sidebar-badge{
+        background-color: #0097A7 !important;
+    }
+
+    /* Sidebar User Drop Down Menu Text Color */
+    #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+    #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+        color: #0097A7 !important;
+    }
+
+    #post_entry-right-info,
+    .sidebar-colored .sidebar-nav li:hover > a,
+    .sidebar-colored .sidebar-nav li:hover > a i,
+    .sidebar-colored .sidebar-nav li > a:hover,
+    .sidebar-colored .sidebar-nav li > a:hover i,
+    .sidebar-colored .sidebar-nav li > a:focus i,
+    .sidebar-colored .sidebar-nav > .open > a,
+    .sidebar-colored .sidebar-nav > .open > a:hover,
+    .sidebar-colored .sidebar-nav > .open > a:focus,
+    #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+        color: #0097A7 !important;
+    }
+
+    .toTop {
+        background: #757575 !important;
+    }
+
+    .material-layout .material-post>.material-nav,
+    .material-layout .material-index>.material-nav,
+    .material-nav a {
+        color: #757575;
+    }
+
+    #scheme-Paradox .MD-burger-layer {
+        background-color: #757575;
+    }
+
+    #scheme-Paradox #post-toc-trigger-btn {
+        color: #757575;
+    }
+
+    .post-toc a:hover {
+        color: #00838F;
+        text-decoration: underline;
+    }
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+        body{
+            background-color: #F5F5F5;
+        }
+
+        /* blog_info bottom background */
+        #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+            background-color: #fff;
+        }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+        .fade {
+            transition: all 800ms linear;
+            -webkit-transform: translate3d(0,0,0);
+            -moz-transform: translate3d(0,0,0);
+            -ms-transform: translate3d(0,0,0);
+            -o-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+            opacity: 1;
+        }
+
+        .fade.out{
+            opacity: 0;
+        }
+    </style>
+
+
+    <script src="/js/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="/css/highlight/solarized-white.css">
+
+    <!-- UC Browser Compatible-->
+    <script>
+        var agent = navigator.userAgent.toLowerCase();
+        if(agent.indexOf('ucbrowser')>0) {
+            document.write('<link rel="stylesheet" href="/css/uc.css">');
+            alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+        }
+    </script>
+
+    <!-- Custom Head -->
+    
+</head>
+
+
+    
+        <body id="scheme-Paradox">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#起因"><span class="post-toc-number">1.</span> <span class="post-toc-text">起因</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#想法"><span class="post-toc-number">2.</span> <span class="post-toc-text">想法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#证书生成"><span class="post-toc-number">3.</span> <span class="post-toc-text">证书生成</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#服务器端搭建与证书验证"><span class="post-toc-number">4.</span> <span class="post-toc-text">服务器端搭建与证书验证</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Android-应用使用-HTTPS-连接"><span class="post-toc-number">5.</span> <span class="post-toc-text">Android 应用使用 HTTPS 连接</span></a></li></ol>
+
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script>
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').css('background-image', 'url(' + '/img/random/material-' + randomNum + '.png' + ')');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                关于 Android 使用 HTTPS 的学习记录
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Jin</strong>
+        <span>2月 20, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/Android/">Android</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/HTTPS/">HTTPS</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/原创/">原创</a>
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=关于 Android 使用 HTTPS 的学习记录&url=http://www.jinblog.link//2017/02/20/AndroidHttps/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=关于 Android 使用 HTTPS 的学习记录&url=http://www.jinblog.link//2017/02/20/AndroidHttps/index.html&via=Jin" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://www.jinblog.link//2017/02/20/AndroidHttps/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h3 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h3><p>之前因为手机应用的安全性问题特意的组织讨论了一下,鉴于项目特性(功能验证),并非是实际场景应用,以及使用加密算法如果一旦数量级过高可能会造成服务器的负担,所以初步考虑先把 HTTPS 连接调通,保证基础的通道安全.</p>
+<h3 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h3><p>因为服务端我并没有涉及,所以服务端的 HTTPS 相关配置由其他人去更改,在这个期间还是希望自己能和服务器端同步动作,但是没有一个支持 HTTPS 的后端测试起来相当麻烦,所以打算借助 GO 语言实现一个简易的支持 HTTPS 的服务端(真的很简易,就两行代码,但是生成 SSL 证书可是苦恼了我好久).</p>
+<h3 id="证书生成"><a href="#证书生成" class="headerlink" title="证书生成"></a>证书生成</h3><p>关于各种证书这方面到现在我还没有具体的弄明白,可能是我太愚笨了,不过按照 Google 中的各种大神分享出来的相关资料还是弄出了一个可以用的证书.</p>
+<p>以下是我生成证书的流程(此处只做记录,仅供参考,系统为 win7 64位):</p>
+<ul>
+<li>下载并安装 <a href="http://slproweb.com/products/Win32OpenSSL.html" target="_blank" rel="external">OpenSSL</a> (关于下载版本与安装流程不做说明)</li>
+<li><p>运行 OpenSSL</p>
+<ul>
+<li><p>生成 rsa 私钥</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"># 生成服务器端私钥</div><div class="line">OpenSSL&gt; genrsa -out server.key 1024</div><div class="line"># 生成服务器端公钥</div><div class="line">OpenSSL&gt; rsa -in server.key -pubout -out server.pem</div><div class="line"># 生成客户端私钥</div><div class="line">OpenSSL&gt; genrsa -out client.key 1024</div><div class="line"># 生成客户端公钥</div><div class="line">OpenSSL&gt; rsa -in client.key -pubout -out client.pem</div></pre></td></tr></table></figure>
+</li>
+<li><p>生成 CA 的 crt</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># 生成 CA 私钥</div><div class="line">OpenSSL&gt; genrsa -out ca.key 1024</div><div class="line"># X.509 Certificate Signing Request (CSR) Management.</div><div class="line">OpenSSL&gt; req -new -key ca.key -out ca.csr</div><div class="line"># X.509 Certificate Data Management.</div><div class="line">openssl x509 -req -in ca.csr -signkey ca.key -out ca.crt</div></pre></td></tr></table></figure>
+<p>生成的 ca.crt 文件是用来签署下面的 server.csr 文件.</p>
+</li>
+<li><p>生成服务器证书</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"># 服务器端需要向 CA 机构申请签名证书，在申请签名证书之前依然是创建自己的 CSR 文件</div><div class="line">openssl req -new -key server.key -out server.csr</div><div class="line"># 向自己的 CA 机构申请证书，签名过程需要 CA 的证书和私钥参与，最终颁发一个带有 CA 签名的证书</div><div class="line">openssl x509 -req -CA ca.crt -CAkey ca.key -CAcreateserial -in server.csr -out server.crt</div><div class="line"># client 端</div><div class="line">openssl req -new -key client.key -out client.csr</div><div class="line"># client 端到 CA 签名</div><div class="line">openssl x509 -req -CA ca.crt -CAkey ca.key -CAcreateserial -in client.csr -out client.crt</div></pre></td></tr></table></figure>
+<p>这条命令执行后需要之前的私钥密码,并且需要依次输入国家,地区,组织,email.  common name 这个需要输入域名或者 IP 地址.在本地测试就输入 localhost</p>
+<p><em>如果连续输入两次 req 命令可能会导致报出以下错误</em><br><img src="http://olihtbm3u.bkt.clouddn.com/image/02/20/req_error.png" alt="req error"><br><em>当然,作为一个临时使用的工具,能够绕过的问题就不算是问题,这个问题也是可以绕过的,既然不能连续输入两次那么就输入一次 req 命令之后重新打开 OpenSSL 即可.(这是一个笨方法,不过有效)</em></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="服务器端搭建与证书验证"><a href="#服务器端搭建与证书验证" class="headerlink" title="服务器端搭建与证书验证"></a>服务器端搭建与证书验证</h3><ul>
+<li><p>搭建服务器</p>
+<p>由于这次主要是记录 HTTPS 在 Android 方面的使用,所以服务器端代码直接记录下来,不具体描述(就两行代码).</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">  <span class="keyword">package</span> main</div><div class="line"></div><div class="line">  <span class="keyword">import</span> (</div><div class="line">	   <span class="string">"net/http"</span></div><div class="line">	    <span class="string">"log"</span></div><div class="line">	     <span class="string">"io"</span></div><div class="line">     )</div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</div><div class="line">  	http.HandleFunc(<span class="string">"/"</span>, <span class="function"><span class="keyword">func</span><span class="params">(w http.ResponseWriter, req *http.Request)</span></span> &#123;</div><div class="line">  		io.WriteString(w, <span class="string">"hello, world!\n"</span>)</div><div class="line">  	&#125;)</div><div class="line">  	<span class="keyword">if</span> e := http.ListenAndServeTLS(<span class="string">":8081"</span>, <span class="string">"server.crt"</span>, <span class="string">"server.key"</span>, <span class="literal">nil</span>); e != <span class="literal">nil</span> &#123;</div><div class="line">  		log.Fatal(<span class="string">"ListenAndServe: "</span>, e)</div><div class="line">  	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>其中 “server.crt” 即使上文生成的服务器证书, “server.key” 即使上文生成的服务器密钥</p>
+</li>
+<li><p>电脑上进行连接测试</p>
+<p>在访问各个支持 HTTPS 的网站时,如 Google/Baidu 我们会看到如下提示</p>
+<p><img src="http://olihtbm3u.bkt.clouddn.com/image/02/20/Google_Https.png" alt="Google_HTTPS"></p>
+<p>但是当我们访问自己签名的服务器时,则获得了另一种提示</p>
+<p><img src="http://olihtbm3u.bkt.clouddn.com/image/02/20/MY_HTTPS_UNSAFE.png" alt="MY_HTTPS_UNSAFE"></p>
+<p>这里就有一个疑问了,都是 HTTPS 的连接为什么他们的网站就是安全而我们自己搭建的服务器就是不安全呢的?</p>
+<p>答案就是 HTTPS 的证书签名了,我们自己搭建的这个服务器端的证书是由自己生成的根证书签名的,而不是由 CA 机构签名的,浏览器并不认识你这个颁发者,所以浏览器认为你这个网站是不安全的.</p>
+<p>为了让浏览器信任我们自己的根证书,我们需要把根证书安装上:</p>
+<ul>
+<li>双击 ca.crt</li>
+<li>点击安装证书</li>
+<li>注意要将证书放在 &lt;受信任的根证书颁发机构&gt;</li>
+</ul>
+<p><em>证书安装完成后可能不会马上生效,可能会有一定的延时且需要将浏览器彻底关闭</em></p>
+<p>安装完根证书并重启了浏览器后在访问 <a href="https://localhost:8081/" target="_blank" rel="external">https://localhost:8081/</a> 就可以看到自己的连接是安全的了</p>
+<p><img src="http://olihtbm3u.bkt.clouddn.com/image/02/20/MY_HTTPS_SAFE.png" alt="MY_HTTP_SAFE"></p>
+</li>
+</ul>
+<h3 id="Android-应用使用-HTTPS-连接"><a href="#Android-应用使用-HTTPS-连接" class="headerlink" title="Android 应用使用 HTTPS 连接"></a>Android 应用使用 HTTPS 连接</h3><p>这里我们尝试用 okhttp 访问 HTTP 连接的方式来访问 HTTPS 连接,会报出以下错误:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">java.security.cert.CertPathValidatorException:</div><div class="line">    Trust anchor for certification path not found.</div></pre></td></tr></table></figure></p>
+<p>以上错误表明我们服务器的证书不可信,也就是因为我们的服务器证书是由自己签名生成的,所以没有被信任,如果你尝试用这种方式访问 <a href="https://www.baidu.com" target="_blank" rel="external">https://www.baidu.com</a> 你就会发现你能访问成功,因为百度的正式是由 CA 机构签名办法的,得到了信任,我们自签名的当然就没有这种待遇了.那么如何解决这个问题呢?</p>
+<p>其实和电脑端的解决办法差不多,那就是由我们自己效验证书并信任.<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//从 server.crt 中读取出来的字符串</span></div><div class="line">String CER_CLIENT = <span class="string">"-----BEGIN CERTIFICATE-----\n"</span> +</div><div class="line">            <span class="string">"MIICIzCCAYwCCQC+PtNg8W5AwTANBgkqhkiG9w0BAQsFADBUMQswCQYDVQQGEwJD\n"</span> +</div><div class="line">            <span class="string">"TjEQMA4GA1UECAwHQmVpSmluZzEQMA4GA1UEBwwHQmVpamluZzENMAsGA1UECgwE\n"</span> +</div><div class="line">            <span class="string">"TXlDQTESMBAGA1UEAwwJbG9jYWxob3N0MB4XDTE3MDIyMzAzMTY1MloXDTE3MDMy\n"</span> +</div><div class="line">            <span class="string">"NTAzMTY1MlowWDELMAkGA1UEBhMCQ04xEDAOBgNVBAgMB0JlaUppbmcxEDAOBgNV\n"</span> +</div><div class="line">            <span class="string">"BAcMB0JlaUppbmcxETAPBgNVBAoMCE15U2VydmVyMRIwEAYDVQQDDAlsb2NhbGhv\n"</span> +</div><div class="line">            <span class="string">"c3QwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMo9KveK/dTgcX7Yv+Q4LaFF\n"</span> +</div><div class="line">            <span class="string">"N3s22ahcYS/RgSH5gCQ11iVDylsBRYcwRY9ayTIbdOW/eZpuWZkiju0cBPprj3/1\n"</span> +</div><div class="line">            <span class="string">"fmWW1lMcI/vN96spXSJ7pbODDn5IJS5nU+bqRI5FEx2jzdQxLL1NZ+OkoN3GECpn\n"</span> +</div><div class="line">            <span class="string">"JKwdB734cX5xnJGM77nlAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAN+Aa4oFDVvSs\n"</span> +</div><div class="line">            <span class="string">"Vuts6lxnZegeY1+UQlYNqJNfUh4RvHt7dBVvbqdwJKTxi7FrYjVfc/83FqC3RzYG\n"</span> +</div><div class="line">            <span class="string">"4CwesgdHon8a/nd6+zT2NVi4QUfKG5XopvTobpSd8sZq2I7uVM3q3UPIBz3yVaNz\n"</span> +</div><div class="line">            <span class="string">"YTMaf4xo5Ys3/1pm0/kO5oPDWp5A3Pw=\n"</span> +</div><div class="line">            <span class="string">"-----END CERTIFICATE-----"</span>;</div><div class="line"><span class="comment">/**</span></div><div class="line">* 实现了 X509TrustManager</div><div class="line">* 通过此类中的 checkServerTrusted 方法来确认服务器证书是否正确</div><div class="line">*/</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyTrustManager</span> <span class="keyword">implements</span> <span class="title">X509TrustManager</span> </span>&#123;</div><div class="line">       X509Certificate cert;</div><div class="line"></div><div class="line">       MyTrustManager(X509Certificate cert) &#123;</div><div class="line">           <span class="keyword">this</span>.cert = cert;</div><div class="line">       &#125;</div><div class="line"></div><div class="line">       <span class="meta">@Override</span></div><div class="line">       <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">checkClientTrusted</span><span class="params">(X509Certificate[] chain, String authType)</span> <span class="keyword">throws</span> CertificateException </span>&#123;</div><div class="line">           <span class="comment">// 我们在客户端只做服务器端证书校验。</span></div><div class="line">       &#125;</div><div class="line"></div><div class="line">       <span class="meta">@Override</span></div><div class="line">       <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">checkServerTrusted</span><span class="params">(X509Certificate[] chain, String authType)</span> <span class="keyword">throws</span> CertificateException </span>&#123;</div><div class="line">           <span class="comment">// 确认服务器端证书和代码中 hard code 的 CRT 证书相同。</span></div><div class="line">           <span class="keyword">if</span> (chain[<span class="number">0</span>].equals(<span class="keyword">this</span>.cert)) &#123;</div><div class="line">               Log.i(<span class="string">"Jin"</span>, <span class="string">"checkServerTrusted Certificate from server is valid!"</span>);</div><div class="line">               <span class="keyword">return</span>;<span class="comment">// found match</span></div><div class="line">           &#125;</div><div class="line">           <span class="keyword">throw</span> <span class="keyword">new</span> CertificateException(<span class="string">"checkServerTrusted No trusted server cert found!"</span>);</div><div class="line">       &#125;</div><div class="line"></div><div class="line">       <span class="meta">@Override</span></div><div class="line">       <span class="keyword">public</span> X509Certificate[] getAcceptedIssuers() &#123;</div><div class="line">           <span class="keyword">return</span> <span class="keyword">new</span> X509Certificate[<span class="number">0</span>];</div><div class="line">       &#125;</div><div class="line">   &#125;</div><div class="line">   <span class="comment">/**</span></div><div class="line">  * 进行 HTTPS 访问测试</div><div class="line">  * <span class="doctag">@throws</span> NoSuchAlgorithmException</div><div class="line">  * <span class="doctag">@throws</span> KeyManagementException</div><div class="line">  */</div><div class="line"> <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">testHttps</span><span class="params">()</span> <span class="keyword">throws</span> NoSuchAlgorithmException, KeyManagementException </span>&#123;</div><div class="line">     SSLContext sc = SSLContext.getInstance(<span class="string">"TLS"</span>);</div><div class="line">     <span class="comment">//信任证书管理,这个是由我们自己生成的,信任我们自己的服务器证书</span></div><div class="line">     TrustManager tm = <span class="keyword">new</span> MyTrustManager(readCert(CER_CLIENT));</div><div class="line">     sc.init(<span class="keyword">null</span>, <span class="keyword">new</span> TrustManager[]&#123;</div><div class="line">             tm</div><div class="line">     &#125;, <span class="keyword">null</span>);</div><div class="line">     OkHttpClient okHttpClient = <span class="keyword">new</span> OkHttpClient().newBuilder()</div><div class="line">             .sslSocketFactory(sc.getSocketFactory(), (X509TrustManager) tm)</div><div class="line">             .hostnameVerifier(hostnameVerifier)</div><div class="line">             .build();</div><div class="line">     Call call = okHttpClient.newCall(<span class="keyword">new</span> Request.Builder().url(<span class="string">"https://192.168.0.232:8081"</span>).get().build());</div><div class="line">     call.enqueue(<span class="keyword">new</span> Callback() &#123;</div><div class="line">         <span class="meta">@Override</span></div><div class="line">         <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onFailure</span><span class="params">(Call call, IOException e)</span> </span>&#123;</div><div class="line">             Log.i(<span class="string">"Jin"</span>, <span class="string">"Failure :"</span> + e.getMessage());</div><div class="line">         &#125;</div><div class="line"></div><div class="line">         <span class="meta">@Override</span></div><div class="line">         <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onResponse</span><span class="params">(Call call, Response response)</span> <span class="keyword">throws</span> IOException </span>&#123;</div><div class="line">             <span class="keyword">final</span> String res = response.body().string();</div><div class="line">             Log.i(<span class="string">"Jin"</span>, <span class="string">"Response :"</span> + res);</div><div class="line">         &#125;</div><div class="line">     &#125;);</div><div class="line"> &#125;</div><div class="line"></div><div class="line"> <span class="comment">//主机地址验证</span></div><div class="line"> <span class="keyword">final</span> HostnameVerifier hostnameVerifier = <span class="keyword">new</span> HostnameVerifier() &#123;</div><div class="line">     <span class="meta">@Override</span></div><div class="line">     <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">verify</span><span class="params">(String hostname, SSLSession session)</span> </span>&#123;</div><div class="line">         <span class="keyword">return</span> hostname.equals(<span class="string">"192.168.0.232"</span>);</div><div class="line">     &#125;</div><div class="line"> &#125;;</div><div class="line"></div><div class="line"> <span class="comment">/**</span></div><div class="line">  * 根据字符串读取出证书</div><div class="line">  * <span class="doctag">@param</span> cer</div><div class="line">  * <span class="doctag">@return</span></div><div class="line">  */</div><div class="line"> <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> X509Certificate <span class="title">readCert</span><span class="params">(String cer)</span> </span>&#123;</div><div class="line">     <span class="keyword">if</span> (cer == <span class="keyword">null</span> || cer.trim().isEmpty())</div><div class="line">         <span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">     InputStream caInput = <span class="keyword">new</span> ByteArrayInputStream(cer.getBytes());</div><div class="line">     X509Certificate cert = <span class="keyword">null</span>;</div><div class="line">     <span class="keyword">try</span> &#123;</div><div class="line">         CertificateFactory cf = CertificateFactory.getInstance(<span class="string">"X.509"</span>);</div><div class="line">         cert = (X509Certificate) cf.generateCertificate(caInput);</div><div class="line">     &#125; <span class="keyword">catch</span> (Exception e) &#123;</div><div class="line">         e.printStackTrace();</div><div class="line">     &#125; <span class="keyword">finally</span> &#123;</div><div class="line">         <span class="keyword">try</span> &#123;</div><div class="line">             <span class="keyword">if</span> (caInput != <span class="keyword">null</span>) &#123;</div><div class="line">                 caInput.close();</div><div class="line">             &#125;</div><div class="line">         &#125; <span class="keyword">catch</span> (Throwable ex) &#123;</div><div class="line">         &#125;</div><div class="line">     &#125;</div><div class="line">     <span class="keyword">return</span> cert;</div><div class="line"> &#125;</div></pre></td></tr></table></figure></p>
+<p>运行后可以看到控制台返回:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">I/Jin: Response :hello, world!</div></pre></td></tr></table></figure></p>
+<p>通过以上的方法就可以访问我们自己签名的 HTTPS 服务器了.</p>
+<p>以下为在学习 HTTPS 相关内容时查询的一些资料,还有一些因为没有记录的原因,未能找到,如果有相关内容涉及到您的分享,请联系我处理.</p>
+<p>感谢这个分享知识的人.</p>
+<blockquote>
+<p><a href="http://blog.csdn.net/lmj623565791/article/details/48129405" target="_blank" rel="external"> Android Https 相关完全解析 当 OkHttp 遇到 Https</a></p>
+<p><a href="http://www.barretlee.com/blog/2015/10/05/how-to-build-a-https-server/" target="_blank" rel="external">HTTPS 证书生成原理和部署细节</a></p>
+</blockquote>
+
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+
+
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/02/14/AndroidUseGolang/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="Jin's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        805191941@qq.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:805191941@qq.com" target="_blank" title="Email Me">
+                        <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    <li id="sidebar-first-li">
+        <a href="/" target="_self">
+            <i class="material-icons sidebar-material-icons">home</i>
+            主页
+        </a>
+    </li>
+
+    <!-- I'm Feeling Lucky -->
+    <!--
+    <li class="dropdown">
+        <a href="" target="_self">
+            <i class="material-icons sidebar-material-icons">explore</i>
+             sidebar.imlucky
+        </a>
+    </li>
+    -->
+
+    <!-- Archives  -->
+    <li class="dropdown">
+        <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+            <i class="material-icons sidebar-material-icons">inbox</i>
+             归档
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+            <li>
+            <a class="sidebar_archives-link" href="/archives/2017/02/">二月 2017<span class="sidebar_archives-count">6</span></a>
+        </ul>
+    </li>
+
+    <!-- Categories  -->
+    
+
+    <!-- Divider -->
+    <li class="divider"></li>
+
+
+    <!-- Pages  -->
+  	
+
+    <!-- Article Numebr  -->
+    <li>
+        <a href="/archives">
+            文章总数
+            <span class="sidebar-badge">6</span>
+        </a>
+    </li>
+</ul>
+
+
+        <!-- Sidebar Divider -->
+        <div class="sidebar-divider"></div>
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Theme Material -->
+<a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+    <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+        主题 - Material
+        <span class="sidebar-badge badge-circle">i</span>
+    </div>
+</a>
+
+<!-- Help & Support -->
+<!--
+<a href="mailto:hiviosey@gmail.com" class="sidebar-footer-text-a">
+    <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+    sidebar.help
+    <span class="mdl-button__ripple-container">
+      <span class="mdl-ripple"></span>
+    </span>
+  </div>
+</a>
+-->
+
+<!-- Feedback -->
+<!--
+<a href="https://github.com/viosey/hexo-theme-material/issues" target="_blank" class="sidebar-footer-text-a">
+    <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+         sidebar.feedback
+                    <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></div>
+</a>
+-->
+
+<!-- Abount Theme -->
+<!--
+<a href="https://blog.viosey.com/index.php/Material.html" target="_blank" class="sidebar-footer-text-a">
+    <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+         sidebar.about_theme
+        <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></div>
+</a>-->
+
+    </div>
+
+    <!-- Sidebar Sponsor -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/twitter" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-twitter.png);">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/facebook" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-facebook.png);">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+        <a href="https://www.google.com/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-gplus.png);">
+                <span class="visuallyhidden">Google Plus</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;
+            <script type="text/javascript">
+                var fd = new Date();
+                document.write(fd.getFullYear());
+            </script>
+            &nbsp;Jin.Blog
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import File -->
+<script src="/js/highlight.min.js"></script>
+<script src="/js/js.min.js"></script>
+<script src="/js/nprogress.js"></script>
+
+<script type="text/javascript">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+
+    $('#nprogress .bar').css({
+        'background': '#FF4081'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #FF4081, 0 0 15px #FF4081'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#FF4081',
+        'border-left-color': '#FF4081'
+    });
+
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Swiftye -->
+
+
+<!-- Local Search-->
+
+
+<!-- Window Load-->
+<script>
+    $(window).load(function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+</script>
+
+<!-- MathJax Load-->
+
+
+                </main>
+            </div>
+        </body>
+    
+</html>
