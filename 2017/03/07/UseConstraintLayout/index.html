@@ -10,7 +10,7 @@
     
     <title>
         
-            标签: AndroidEventBus | 
+            学习使用 ConstraintLayout | 
         
         Jin.Blog
     </title>
@@ -48,7 +48,7 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://www.jinblog.link">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="标签: AndroidEventBus | Jin.Blog">
+    <meta property="og:title" content="学习使用 ConstraintLayout | Jin.Blog">
     <meta property="og:description" content="һ�� Android ����Ա�ļ��±�">
 
     <!--[if lte IE 9]>
@@ -200,197 +200,230 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
     
-        
-            <!-- Paradox Thumbnail -->
-            <div class="post_entry-module mdl-card mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/02/08/AndroidEventBus3/">AndroidEventBus 使用后感受</a></p>
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
     </div>
+    -->
 
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            本来是写了一些关于 
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/02/08/AndroidEventBus3/" target="_self">继续阅读</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Jin's avatar">
-            </div>
-            <div>
-                <strong>Jin</strong>
-                <span>2月 08, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#起因"><span class="post-toc-number">1.</span> <span class="post-toc-text">起因</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ConstraintLayout-约束布局-简介"><span class="post-toc-number">2.</span> <span class="post-toc-text">ConstraintLayout(约束布局) 简介</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ConstraintLayout-学习总结"><span class="post-toc-number">3.</span> <span class="post-toc-text">ConstraintLayout 学习总结</span></a></li></ol>
+
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
                 
-            </span>
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
+    <!-- Paradox Post Header -->
+    
+        <!-- Custom Thumbnail -->
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(/img/blog/three_buttons_working_as_expected.png)">
+    
+            <p class="article-headline-p">
+                学习使用 ConstraintLayout
+            </p>
         </div>
-    </div>
-</div>
 
-        
-        
-    
-        
-            <!-- Paradox Thumbnail -->
-            <div class="post_entry-module mdl-card mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/02/07/AndroidEventBus2/">Jin 的学习记录 AndroidEventBus 源码拜读记录(二)</a></p>
-    </div>
 
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/02/07/AndroidEventBus2/" target="_self">继续阅读</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Jin's avatar">
-            </div>
-            <div>
-                <strong>Jin</strong>
-                <span>2月 07, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
+
+
                 
-            </span>
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
 
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
     </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Jin</strong>
+        <span>3月 07, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/Android/">Android</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/ConstraintLayout/">ConstraintLayout</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/原创/">原创</a>
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=学习使用 ConstraintLayout&url=http://www.jinblog.link//2017/03/07/UseConstraintLayout/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=学习使用 ConstraintLayout&url=http://www.jinblog.link//2017/03/07/UseConstraintLayout/index.html&via=Jin" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://www.jinblog.link//2017/03/07/UseConstraintLayout/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
 </div>
 
-        
-        
-    
-        
-            <!-- Paradox Thumbnail -->
-            <div class="post_entry-module mdl-card mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/02/07/AndroidEventBus1/">Jin 的学习记录 AndroidEventBus 源码拜读记录(一)</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            起因作为一个初级的...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/02/07/AndroidEventBus1/" target="_self">继续阅读</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Jin's avatar">
-            </div>
-            <div>
-                <strong>Jin</strong>
-                <span>2月 07, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
                 
-            </span>
 
-            
+                <!-- Post Content -->
+                <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h3 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h3><p>每件事情都需要一个起因来引发,我觉得学习也同样需要,当你觉得一门技术你需要使用或值得你使用你就会去学习,这个需求就是一个起因.那么至此为什么要学习 ConstraintLayout 这个布局呢? 是因为我在昨天更新了一下 AndroidStudio 将其从 2.2 版本更新至 2.3 版本.也去看了一些 IDE 方面的改变,但是奈何技术水平所限一些东西没怎么看明白,但是我对 2.3 版本关于布局方面的更改还是有些兴趣的,当我新建了一个测试项目想要测试一下 2.3 版本又对布局方面做了哪些更改的时候我发现新项目默认的根布局不再是我所熟知的 RelativeLayout 而变为了 ConstraintLayout, 这证明以后 ConstraintLayout 会发展为一种趋势,甚至是比 RelativeLayout 更常用的一种布局,所以赶紧就去找一下各位大牛分享出来的技术文章学习一下</p>
+<h3 id="ConstraintLayout-约束布局-简介"><a href="#ConstraintLayout-约束布局-简介" class="headerlink" title="ConstraintLayout(约束布局) 简介"></a>ConstraintLayout(约束布局) 简介</h3><p>在查阅了郭霖大大分享出来的文章 <a href="http://chuansong.me/n/1526028851022" target="_blank" rel="external">最全面的 ConstraintLayout 教程</a> 后发现原来 ConstraintLayout 早在 Android Studio 2.2 中就已经出现了(羞愧啊~)虽然是测试版,在我写这篇学习记录的时候 ConstraintLayout 已经更新了正式版本,添加以下依赖便可引入 1.0.1 版本<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">compile &apos;com.android.support.constraint:constraint-layout:1.0.1&apos;</div></pre></td></tr></table></figure></p>
+<p><em>郭霖大大很厉害的,他的 &lt;第一行代码&gt; 我有买哦~</em></p>
+<h3 id="ConstraintLayout-学习总结"><a href="#ConstraintLayout-学习总结" class="headerlink" title="ConstraintLayout 学习总结"></a>ConstraintLayout 学习总结</h3><p>关于如何使用 ConstraintLayout ,下面的的几篇推荐文章已经进行了很好的说明,在我的学习记录中就不在重复的进行说明了.</p>
+<p>试用了一下 ConstraintLayout 感觉这个约束布局相当的不错甚至可以说比 RelativeLayout 要强的很多,在没有使用过约束布局的之前大部分的布局其实是由 XML 实现的,可视化布局虽然很早就支持但是一直不是十分的理想,因为之前的布局需要大量的嵌套一层套一层,拖拽有可能会造成失误.而有了约束布局之后会大幅增加拖拽布局的使用次数,甚至是改变以往的编码布局的方式(这估计也是 Google 想看到的结果).</p>
+<p>简单总结一下</p>
+<p>优点:</p>
+<ul>
+<li>使布局变得更简单</li>
+<li>控件与控件之间相互约束,统一改变更方便</li>
+<li>大幅度减少嵌套布局的使用</li>
+</ul>
+<p>缺点:</p>
+<ul>
+<li>如果页面布局控件较多,可能会造成对应关系混乱</li>
+<li>如果页面控件的约束关系设计不合理可能会牵一发而动全身</li>
+<li>使你的布局 XML 变得更加烦琐</li>
+</ul>
+<p>以上只是试用了不到 1 天的简单总结并不能说明什么,如果以后再使用过程中有任何的发现在记录下来吧.</p>
+<p>以下为个人推荐学习文章,感谢那些分享知识的人.</p>
+<blockquote>
+<p><a href="http://chuansong.me/n/1526028851022" target="_blank" rel="external">最全面的 ConstraintLayout 教程</a></p>
+<p><a href="https://codelabs.developers.google.com/codelabs/constraint-layout/index.html#0" target="_blank" rel="external">官方提供的 Codelab 项目</a> (英文,可能需要自备梯子)</p>
+<p><a href="http://quanqi.org/2016/05/20/code-labs-constraint-layout/" target="_blank" rel="external">Constraint 代码实验室 – 带你一步步理解使用 ConstraintLayout</a>(上文的中文翻译搬运,感谢该作者)</p>
+</blockquote>
 
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+
+
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/02/20/AndroidHttps/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
         </div>
     </div>
-</div>
 
-        
-        
-    
-
-    
-
-    
-        <script>
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').css('background-image', 'url(' + '/img/random/material-' + randomNum + '.png' + ')')
-
-        locatePost = locatePost.next();
-    }
-</script>
-
-    
-</div>
 
 
                     
@@ -553,6 +586,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 
