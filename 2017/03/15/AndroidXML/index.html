@@ -10,7 +10,7 @@
     
     <title>
         
-            Jin 的学习记录 AndroidEventBus 源码拜读记录(一) | 
+            Android 开发中的 XML 的使用 | 
         
         Jin.Blog
     </title>
@@ -48,7 +48,7 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://www.jinblog.link">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Jin 的学习记录 AndroidEventBus 源码拜读记录(一) | Jin.Blog">
+    <meta property="og:title" content="Android 开发中的 XML 的使用 | Jin.Blog">
     <meta property="og:description" content="һ�� Android ����Ա�ļ��±�">
 
     <!--[if lte IE 9]>
@@ -226,7 +226,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#起因"><span class="post-toc-number">1.</span> <span class="post-toc-text">起因</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#源码结构"><span class="post-toc-number">2.</span> <span class="post-toc-text">源码结构</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#起因"><span class="post-toc-number">1.</span> <span class="post-toc-text">起因</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#XML-简介"><span class="post-toc-number">2.</span> <span class="post-toc-text">XML 简介</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Pull解析"><span class="post-toc-number">3.</span> <span class="post-toc-text">Pull解析</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#总结"><span class="post-toc-number">4.</span> <span class="post-toc-text">总结</span></a></li></ol>
 
         <!--
         <li class="mdl-menu__item">
@@ -250,19 +250,11 @@
                 
     <!-- Paradox Post Header -->
     
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-            <script>
-    var randomNum = Math.floor(Math.random() * 19 + 1);
-
-    $('.post_thumbnail-random').css('background-image', 'url(' + '/img/random/material-' + randomNum + '.png' + ')');
-</script>
-
-        
+        <!-- Custom Thumbnail -->
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(/img/blog/XML_img_02.jpg)">
     
             <p class="article-headline-p">
-                Jin 的学习记录 AndroidEventBus 源码拜读记录(一)
+                Android 开发中的 XML 的使用
             </p>
         </div>
 
@@ -281,7 +273,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Jin</strong>
-        <span>2月 07, 2017</span>
+        <span>3月 15, 2017</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -305,7 +297,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/Android/">Android</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/AndroidEventBus/">AndroidEventBus</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/原创/">原创</a>
+        <a class="post_tag-link" href="/tags/Android/">Android</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/XML/">XML</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/原创/">原创</a>
     </ul>
     
 
@@ -321,7 +313,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Jin 的学习记录 AndroidEventBus 源码拜读记录(一)&url=http://www.jinblog.link//2017/02/07/AndroidEventBus1/index.html&pic=&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Android 开发中的 XML 的使用&url=http://www.jinblog.link//2017/03/15/AndroidXML/index.html&pic=&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -330,7 +322,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Jin 的学习记录 AndroidEventBus 源码拜读记录(一)&url=http://www.jinblog.link//2017/02/07/AndroidEventBus1/index.html&via=Jin" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Android 开发中的 XML 的使用&url=http://www.jinblog.link//2017/03/15/AndroidXML/index.html&via=Jin" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -342,7 +334,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://www.jinblog.link//2017/02/07/AndroidEventBus1/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://www.jinblog.link//2017/03/15/AndroidXML/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -366,14 +358,15 @@
                 <!-- Post Content -->
                 <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>作为一个初级的不能在初级的 Android 开发人员,无意中发现了这个名为 <a href="https://github.com/hehonghui/AndroidEventBus" target="_blank" rel="external">AndroidEventBus</a> 的工具,瞬间觉得世界发生了转变, 发现原来各种繁杂的线程通信,各种Fragment 与 Activity 间的通信通通变得清晰简单了起来,舍弃了各种烦乱的无处安放的 Handler 和网络访问回调都统一交由 <a href="https://github.com/hehonghui/AndroidEventBus" target="_blank" rel="external">AndroidEventBus</a> 来管理,订阅事件的模式使程序的耦合性降得十分的低,使代码更加的简洁.</p>
-<p>故此想通过阅读源码的方式来进一步了解这个工具的工作原理并记录下来,也想通过这种方式来提高一下自己阅读理解代码以及自己的描述记录的能力</p>
-<blockquote>
-<p>关于使用方式请参考:<a href="https://github.com/hehonghui/AndroidEventBus/blob/master/README-ch.md" target="_blank" rel="external"></a><br><a href="https://github.com/hehonghui/AndroidEventBus/blob/master/README-ch.md" target="_blank" rel="external">https://github.com/hehonghui/AndroidEventBus/blob/master/README-ch.md</a><br><a href="http://blog.csdn.net/bboyfeiyu/article/details/43450553" target="_blank" rel="external">http://blog.csdn.net/bboyfeiyu/article/details/43450553</a></p>
+        <h3 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h3><p>最近因为一个测试性的项目中有一个页面需要使用九宫格的形式来展示一些按钮(展示些按钮?有点怪怪的),按钮的功能相似都是向服务器发送一个请求,但是请求的参数根据每个按钮的功能不同而不同,最开始的一个实验性版本我直接将这些请求及参数写成对象存入列表,之后就可以轻松展示了.但是随着时间推移以及项目进度进展,某一群人一直在对这些按钮的参数及按钮位置一类的值进行改变,这样直接硬编码在代码中的那些对象列表也需要不停的调整相当的麻烦,作为一个程序员(水平不高的程序员依旧是程序员~)我相当的讨厌麻烦,所以就要做一个便捷且可操作性强的配置文件来解决这个问题,既然是配置文件那么就需要一种格式来书写这种配置文件,那么最简单的当然是 Json 和 XML 但是为了更加直观且可直接编辑的这个需要我选择了 XML.</p>
+<h3 id="XML-简介"><a href="#XML-简介" class="headerlink" title="XML 简介"></a>XML 简介</h3><blockquote>
+<p>可扩展标记语言（英语：Extensible Markup Language，简称：XML），是一种标记语言。标记指计算机所能理解的信息符号，通过此种标记，计算机之间可以处理包含各种信息的文章等。如何定义这些标记，既可以选择国际通用的标记语言，比如 HTML，也可以使用像 XML 这样由相关人士自由决定的标记语言，这就是语言的可扩展性。XML 是从标准通用标记语言（SGML）中简化修改出来的。它主要用到的有可扩展标记语言、可扩展样式语言（XSL）、XBRL 和 XPath 等。   - 引自维基百科</p>
 </blockquote>
-<h2 id="源码结构"><a href="#源码结构" class="headerlink" title="源码结构"></a>源码结构</h2><p><img src="http://upload-images.jianshu.io/upload_images/4035810-68213b0720de0d0a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="源码结构"></p>
-<p><a href="https://github.com/hehonghui/AndroidEventBus" target="_blank" rel="external">AndroidEventBus</a> 的源码结构相当清晰也相当的简单,由于我也是一边学习阅读源码一边记录,所以不可避免会有各种错误,可能有一些错误会通过阅读过源码后修改过来,也可能之后也没有发现这处错误,望各位见谅并提出,下面我会结合各个类的注释及源码大致说明下各个类的作用.</p>
-<p><em>注:水平不足,错误不可避免,如果发现错误希望能提示一下.</em></p>
+<p> <em>为什么要把上面维基百科的内容复制进来呢?因为这也是我查找到的资料,记录下来方便以后查找,就当做学习笔记来看待,多阅读几次也能加深印象 </em></p>
+<h3 id="Pull解析"><a href="#Pull解析" class="headerlink" title="Pull解析"></a>Pull解析</h3><p> 这里不一一描述各种解析方式,而是直接将自己写的一段解析 XML 的代码贴到这里,方便以后查询学习</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div></pre></td><td class="code"><pre><div class="line"> /**</div><div class="line"> * 使用 PULL 方法解析指令集XML</div><div class="line"> *</div><div class="line"> * @param context        context</div><div class="line"> * @param xmlResourcesId XML资源ID</div><div class="line"> * @return 解析后的结果</div><div class="line"> */</div><div class="line">public Set&lt;T&gt; parserXML(Context context, int xmlResourcesId) &#123;</div><div class="line">    Set&lt;T&gt; mInstructions = new HashSet&lt;&gt;();</div><div class="line">    try &#123;</div><div class="line">        //从xml资源文件夹加载 customizes.xml 文件</div><div class="line">        XmlResourceParser XmlParser = context.getResources().getXml(xmlResourcesId);</div><div class="line">        int type = XmlParser.getEventType();</div><div class="line">        T newObject = getNewObject();</div><div class="line">        while (type != XmlResourceParser.END_DOCUMENT) &#123;</div><div class="line">            switch (type) &#123;</div><div class="line">                case XmlResourceParser.START_DOCUMENT:</div><div class="line">                    mInstructions = new HashSet&lt;&gt;();</div><div class="line">                    break;</div><div class="line">                case XmlResourceParser.START_TAG:</div><div class="line">                    if (root.equals(XmlParser.getName())) &#123;</div><div class="line">                        //如果读取到根节点则跳过</div><div class="line">                        break;</div><div class="line">                    &#125;</div><div class="line">                    if (elementRoot.equals(XmlParser.getName())) &#123;</div><div class="line">                        //如果读取到开始指令节点则创建指令对象</div><div class="line">                        newObject = getNewObject();</div><div class="line">                    &#125; else &#123;</div><div class="line">                        assert newObject != null;</div><div class="line">                        //使用反射获取指令</div><div class="line">                        setInstructionValueByName(newObject, XmlParser.getName(), XmlParser.nextText());</div><div class="line">                    &#125;</div><div class="line">                    break;</div><div class="line">                case XmlResourceParser.END_TAG:</div><div class="line">                    if (elementRoot.equals(XmlParser.getName())) &#123;</div><div class="line">                        //添加指令到指令集合</div><div class="line">                        mInstructions.add(newObject);</div><div class="line">                        //指令对象清空,预备下次使用</div><div class="line">                        newObject = null;</div><div class="line">                    &#125;</div><div class="line">                    break;</div><div class="line">                default:</div><div class="line">                    break;</div><div class="line">            &#125;</div><div class="line">            //读取下一个节点状态</div><div class="line">            type = XmlParser.next();</div><div class="line">        &#125;</div><div class="line">    &#125; catch (XmlPullParserException e) &#123;</div><div class="line">        Logger.e(e, &quot;指令集配置文件解析异常&quot;);</div><div class="line">    &#125; catch (IOException e) &#123;</div><div class="line">        Logger.e(e, &quot;指令集配置文件读取异常&quot;);</div><div class="line">    &#125;</div><div class="line">    return mInstructions;</div><div class="line">&#125;</div><div class="line"></div><div class="line">/**</div><div class="line"> * 通过反射读取出指令</div><div class="line"> *</div><div class="line"> * @param instruction 指令对象</div><div class="line"> * @param name        节点名字</div><div class="line"> * @param value       节点值</div><div class="line"> */</div><div class="line">private void setInstructionValueByName(@NonNull T instruction, @NonNull String name, @NonNull String value) &#123;</div><div class="line">    try &#123;</div><div class="line">        Class clazz = getObjectClass();</div><div class="line">        Method declaredMethod = clazz.getDeclaredMethod(&quot;set&quot; + name, String.class);</div><div class="line">        declaredMethod.invoke(instruction, value);</div><div class="line">    &#125; catch (Exception e) &#123;</div><div class="line">        Logger.e(e, &quot;反射解析错误&quot;);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p> <em>以上代码仅为个人使用记录</em></p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p> 程序还是相当灵活的,有很多的方法能实现同一个目的,至于怎么选择,怎么应用就完全靠自己的抉择,学习的越多可选择的解决方式也就越多,努力学习吧~</p>
 
     
 
@@ -396,19 +389,19 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2017/02/07/AndroidEventBus2/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
+    
+        <a href="/2017/03/07/UseConstraintLayout/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
     
 </nav>
 
