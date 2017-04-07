@@ -10,7 +10,7 @@
     
     <title>
         
-            Android 开发中的 XML 的使用 | 
+            使用 Kotlin 开发 Android 应用(2) | 
         
         Jin.Blog
     </title>
@@ -48,7 +48,7 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://www.jinblog.link">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Android 开发中的 XML 的使用 | Jin.Blog">
+    <meta property="og:title" content="使用 Kotlin 开发 Android 应用(2) | Jin.Blog">
     <meta property="og:description" content="һ�� Android ����Ա�ļ��±�">
 
     <!--[if lte IE 9]>
@@ -226,7 +226,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#起因"><span class="post-toc-number">1.</span> <span class="post-toc-text">起因</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#XML-简介"><span class="post-toc-number">2.</span> <span class="post-toc-text">XML 简介</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Pull解析"><span class="post-toc-number">3.</span> <span class="post-toc-text">Pull解析</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#总结"><span class="post-toc-number">4.</span> <span class="post-toc-text">总结</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Kotlin-用于-Android-开发的分析"><span class="post-toc-number">1.</span> <span class="post-toc-text">Kotlin 用于 Android 开发的分析</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Kotlin-应用方面与-Java-的对比"><span class="post-toc-number">2.</span> <span class="post-toc-text">Kotlin 应用方面与 Java 的对比</span></a></li></ol>
 
         <!--
         <li class="mdl-menu__item">
@@ -251,10 +251,10 @@
     <!-- Paradox Post Header -->
     
         <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(/img/blog/XML_img_02.jpg)">
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(/img/blog/kotlin.jpg)">
     
             <p class="article-headline-p">
-                Android 开发中的 XML 的使用
+                使用 Kotlin 开发 Android 应用(2)
             </p>
         </div>
 
@@ -273,7 +273,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Jin</strong>
-        <span>3月 15, 2017</span>
+        <span>4月 05, 2017</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -297,7 +297,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/Android/">Android</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/XML/">XML</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/原创/">原创</a>
+        <a class="post_tag-link" href="/tags/Android/">Android</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/Kotlin/">Kotlin</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/原创/">原创</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/学习笔记/">学习笔记</a>
     </ul>
     
 
@@ -313,7 +313,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Android 开发中的 XML 的使用&url=http://www.jinblog.link//2017/03/15/AndroidXML/index.html&pic=&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=使用 Kotlin 开发 Android 应用(2)&url=http://www.jinblog.link//2017/04/05/AndroidUseKotlin2/index.html&pic=&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -322,7 +322,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Android 开发中的 XML 的使用&url=http://www.jinblog.link//2017/03/15/AndroidXML/index.html&via=Jin" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=使用 Kotlin 开发 Android 应用(2)&url=http://www.jinblog.link//2017/04/05/AndroidUseKotlin2/index.html&via=Jin" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -334,7 +334,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://www.jinblog.link//2017/03/15/AndroidXML/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://www.jinblog.link//2017/04/05/AndroidUseKotlin2/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -358,15 +358,39 @@
                 <!-- Post Content -->
                 <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h3 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h3><p>最近因为一个测试性的项目中有一个页面需要使用九宫格的形式来展示一些按钮(展示些按钮?有点怪怪的),按钮的功能相似都是向服务器发送一个请求,但是请求的参数根据每个按钮的功能不同而不同,最开始的一个实验性版本我直接将这些请求及参数写成对象存入列表,之后就可以轻松展示了.但是随着时间推移以及项目进度进展,某一群人一直在对这些按钮的参数及按钮位置一类的值进行改变,这样直接硬编码在代码中的那些对象列表也需要不停的调整相当的麻烦,作为一个程序员(水平不高的程序员依旧是程序员~)我相当的讨厌麻烦,所以就要做一个便捷且可操作性强的配置文件来解决这个问题,既然是配置文件那么就需要一种格式来书写这种配置文件,那么最简单的当然是 Json 和 XML 但是为了更加直观且可直接编辑的这个需要我选择了 XML.</p>
-<h3 id="XML-简介"><a href="#XML-简介" class="headerlink" title="XML 简介"></a>XML 简介</h3><blockquote>
-<p>可扩展标记语言（英语：Extensible Markup Language，简称：XML），是一种标记语言。标记指计算机所能理解的信息符号，通过此种标记，计算机之间可以处理包含各种信息的文章等。如何定义这些标记，既可以选择国际通用的标记语言，比如 HTML，也可以使用像 XML 这样由相关人士自由决定的标记语言，这就是语言的可扩展性。XML 是从标准通用标记语言（SGML）中简化修改出来的。它主要用到的有可扩展标记语言、可扩展样式语言（XSL）、XBRL 和 XPath 等。   - 引自维基百科</p>
-</blockquote>
-<p> <em>为什么要把上面维基百科的内容复制进来呢?因为这也是我查找到的资料,记录下来方便以后查找,就当做学习笔记来看待,多阅读几次也能加深印象 </em></p>
-<h3 id="Pull解析"><a href="#Pull解析" class="headerlink" title="Pull解析"></a>Pull解析</h3><p> 这里不一一描述各种解析方式,而是直接将自己写的一段解析 XML 的代码贴到这里,方便以后查询学习</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div></pre></td><td class="code"><pre><div class="line"> /**</div><div class="line"> * 使用 PULL 方法解析指令集XML</div><div class="line"> *</div><div class="line"> * @param context        context</div><div class="line"> * @param xmlResourcesId XML资源ID</div><div class="line"> * @return 解析后的结果</div><div class="line"> */</div><div class="line">public Set&lt;T&gt; parserXML(Context context, int xmlResourcesId) &#123;</div><div class="line">    Set&lt;T&gt; mInstructions = new HashSet&lt;&gt;();</div><div class="line">    try &#123;</div><div class="line">        //从xml资源文件夹加载 customizes.xml 文件</div><div class="line">        XmlResourceParser XmlParser = context.getResources().getXml(xmlResourcesId);</div><div class="line">        int type = XmlParser.getEventType();</div><div class="line">        T newObject = getNewObject();</div><div class="line">        while (type != XmlResourceParser.END_DOCUMENT) &#123;</div><div class="line">            switch (type) &#123;</div><div class="line">                case XmlResourceParser.START_DOCUMENT:</div><div class="line">                    mInstructions = new HashSet&lt;&gt;();</div><div class="line">                    break;</div><div class="line">                case XmlResourceParser.START_TAG:</div><div class="line">                    if (root.equals(XmlParser.getName())) &#123;</div><div class="line">                        //如果读取到根节点则跳过</div><div class="line">                        break;</div><div class="line">                    &#125;</div><div class="line">                    if (elementRoot.equals(XmlParser.getName())) &#123;</div><div class="line">                        //如果读取到开始指令节点则创建指令对象</div><div class="line">                        newObject = getNewObject();</div><div class="line">                    &#125; else &#123;</div><div class="line">                        assert newObject != null;</div><div class="line">                        //使用反射获取指令</div><div class="line">                        setInstructionValueByName(newObject, XmlParser.getName(), XmlParser.nextText());</div><div class="line">                    &#125;</div><div class="line">                    break;</div><div class="line">                case XmlResourceParser.END_TAG:</div><div class="line">                    if (elementRoot.equals(XmlParser.getName())) &#123;</div><div class="line">                        //添加指令到指令集合</div><div class="line">                        mInstructions.add(newObject);</div><div class="line">                        //指令对象清空,预备下次使用</div><div class="line">                        newObject = null;</div><div class="line">                    &#125;</div><div class="line">                    break;</div><div class="line">                default:</div><div class="line">                    break;</div><div class="line">            &#125;</div><div class="line">            //读取下一个节点状态</div><div class="line">            type = XmlParser.next();</div><div class="line">        &#125;</div><div class="line">    &#125; catch (XmlPullParserException e) &#123;</div><div class="line">        Logger.e(e, &quot;指令集配置文件解析异常&quot;);</div><div class="line">    &#125; catch (IOException e) &#123;</div><div class="line">        Logger.e(e, &quot;指令集配置文件读取异常&quot;);</div><div class="line">    &#125;</div><div class="line">    return mInstructions;</div><div class="line">&#125;</div><div class="line"></div><div class="line">/**</div><div class="line"> * 通过反射读取出指令</div><div class="line"> *</div><div class="line"> * @param instruction 指令对象</div><div class="line"> * @param name        节点名字</div><div class="line"> * @param value       节点值</div><div class="line"> */</div><div class="line">private void setInstructionValueByName(@NonNull T instruction, @NonNull String name, @NonNull String value) &#123;</div><div class="line">    try &#123;</div><div class="line">        Class clazz = getObjectClass();</div><div class="line">        Method declaredMethod = clazz.getDeclaredMethod(&quot;set&quot; + name, String.class);</div><div class="line">        declaredMethod.invoke(instruction, value);</div><div class="line">    &#125; catch (Exception e) &#123;</div><div class="line">        Logger.e(e, &quot;反射解析错误&quot;);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p> <em>以上代码仅为个人使用记录</em></p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p> 程序还是相当灵活的,有很多的方法能实现同一个目的,至于怎么选择,怎么应用就完全靠自己的抉择,学习的越多可选择的解决方式也就越多,努力学习吧~</p>
+        <h3 id="Kotlin-用于-Android-开发的分析"><a href="#Kotlin-用于-Android-开发的分析" class="headerlink" title="Kotlin 用于 Android 开发的分析"></a>Kotlin 用于 Android 开发的分析</h3><p>Kotlin 是一种十分适合替代 Java 进行 Android 开发的一种语言,同样可以在 Java 虚拟机上运行,并且与 Java 之间可以进行混合使用,这样就使得现存的大部分 Android 的第三方工具都可以无条件使用, 并且 Kotlin 在 IDE 兼容方面做得十分优秀使得配置起来十分简单方便甚至可以一键进行配置,这进一步降低了使用门槛</p>
+<p>Kotlin 还提供了一个能将现有的 Java 代码转换为 Kotlin 代码的工具,可以在 IDE 中将 Java 代码转换为 Kotlin 代码并且转换的相当不错,甚至可以利用这个工具来熟悉使用 Kotlin 语言, 当使用 Kotlin 语言遇到了代码方面的问题,可以用 Java 现将功能实现在一键转换为 Kotlin 语言之后参考学习,这也降低了学习成本</p>
+<h3 id="Kotlin-应用方面与-Java-的对比"><a href="#Kotlin-应用方面与-Java-的对比" class="headerlink" title="Kotlin 应用方面与 Java 的对比"></a>Kotlin 应用方面与 Java 的对比</h3><ol>
+<li>类型检查和自动转换<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function">fun <span class="title">getStringLength</span><span class="params">(obj: Any)</span>: Int? </span>&#123;</div><div class="line">  <span class="comment">// &amp;&amp; 右边 obj 已经自动转换为 String 类型</span></div><div class="line">  <span class="keyword">if</span> (obj is String &amp;&amp; obj.length &gt; <span class="number">0</span>)</div><div class="line">    <span class="keyword">return</span> obj.length</div><div class="line"></div><div class="line">  <span class="keyword">return</span> <span class="keyword">null</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>上方的例子 obj 的类型在传入方法时为 Any (相当于 Java 中的 Object) 但在执行了类型检查 obj is String 之后如果返回值为 true obj 就已经自动转换为了 String 类型, 所以之后的 obj 就可以当做一个 String 来使用.</p>
+<ol>
+<li><p>when 表达式</p>
+<p>这是一个 Java 中没有的表达式,功能十分强大便捷</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">  <span class="function">fun <span class="title">cases</span><span class="params">(obj: Any)</span> </span>&#123;</div><div class="line">    when (obj) &#123;</div><div class="line">        <span class="number">1</span> -&gt; print(<span class="string">"One"</span>) <span class="comment">// 当 obj == 1 时</span></div><div class="line">        <span class="string">"Hello"</span> -&gt; print(<span class="string">"Greeting"</span>) <span class="comment">// 当 obj == "Hello"时</span></div><div class="line">        is Long -&gt; print(<span class="string">"Long"</span>) <span class="comment">//当 obj 是 Long 类型时</span></div><div class="line">        !is String -&gt; print(<span class="string">"Not a string"</span>) <span class="comment">// 当 obj 不是字符串时</span></div><div class="line">        <span class="keyword">else</span> -&gt; print(<span class="string">"Unknown"</span>)</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>上方例子中的 when 表达式非常实用,最直观的一点可以解决过多 if 的问题,为了更加直观写一个上方例子相对的 Java 版本</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">cases</span><span class="params">(Object obj)</span> </span>&#123;</div><div class="line">      <span class="keyword">if</span> (obj <span class="keyword">instanceof</span> Integer) &#123;</div><div class="line">          Logger.i(<span class="string">"One"</span>);</div><div class="line">      &#125; <span class="keyword">else</span> <span class="keyword">if</span> (obj <span class="keyword">instanceof</span> String &amp;&amp; obj.equals(<span class="string">"Hello"</span>)) &#123;</div><div class="line">          Logger.i(<span class="string">"Greeting"</span>);</div><div class="line">      &#125; <span class="keyword">else</span> <span class="keyword">if</span> (obj <span class="keyword">instanceof</span> Long) &#123;</div><div class="line">          Logger.i(<span class="string">"Long"</span>);</div><div class="line">      &#125; <span class="keyword">else</span> <span class="keyword">if</span> (!(obj <span class="keyword">instanceof</span> String)) &#123;</div><div class="line">          Logger.i(<span class="string">"Not a string"</span>);</div><div class="line">      &#125; <span class="keyword">else</span> &#123;</div><div class="line">          Logger.i(<span class="string">"Unknown"</span>);</div><div class="line">      &#125;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>给已有类型扩展函数</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">fun Int.biggerThanTen(): Boolean &#123;</div><div class="line">  <span class="keyword">return</span> <span class="keyword">this</span> &gt; <span class="number">10</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 测试一下扩展函数</span></div><div class="line"><span class="function">fun <span class="title">extensions</span><span class="params">()</span> </span>&#123;</div><div class="line">  <span class="number">100</span>.biggerThanTen()</div><div class="line">  <span class="number">5</span>.biggerThanTen()</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这种特性简直是太方便了,甚至能节省大部分的工具类,直接就可以给已有的类添加新的方法</p>
+</li>
+<li><p>数据类型</p>
+<p>数据类是一种非常强大的类,它可以让你避免创建 Java 中的用于保存状态但又操作非常简单的模版代码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestEntity</span> </span>&#123;</div><div class="line">    String name;</div><div class="line">    String age;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> name;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>.name = name;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getAge</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> age;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(String age)</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>.age = age;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="string">"TestEntity&#123;"</span> +</div><div class="line">                <span class="string">"name='"</span> + name + <span class="string">'\''</span> +</div><div class="line">                <span class="string">", age='"</span> + age + <span class="string">'\''</span> +</div><div class="line">                <span class="string">'&#125;'</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object o)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (<span class="keyword">this</span> == o) <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">        <span class="keyword">if</span> (o == <span class="keyword">null</span> || getClass() != o.getClass()) <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line"></div><div class="line">        TestEntity that = (TestEntity) o;</div><div class="line"></div><div class="line">        <span class="keyword">if</span> (name != <span class="keyword">null</span> ? !name.equals(that.name) : that.name != <span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">        <span class="keyword">return</span> age != <span class="keyword">null</span> ? age.equals(that.age) : that.age == <span class="keyword">null</span>;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hashCode</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">int</span> result = name != <span class="keyword">null</span> ? name.hashCode() : <span class="number">0</span>;</div><div class="line">        result = <span class="number">31</span> * result + (age != <span class="keyword">null</span> ? age.hashCode() : <span class="number">0</span>);</div><div class="line">        <span class="keyword">return</span> result;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>以上代码是一个拥有两个属性的一个数据实体类,是 Java 中较为常见的写法,而在 Kotlin 中就相对简单的多</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">data</span> <span class="class"><span class="keyword">class</span> <span class="title">TestEntityKT</span></span>(<span class="keyword">val</span> name: String, <span class="keyword">val</span> age: String)</div></pre></td></tr></table></figure>
+<p>仅以上的一行代码即可实现与 Java 中相同的功能, 其中的大部分的重复代码全部交由 Kotlin 来处理,大大节约了代码量</p>
+</li>
+<li><p>关于循环</p>
+<p>Kotlin 对于循环也有很多相当方便的功能,能使代码更加简洁,可读性也更高,以下将和 Java 代码做一下简单的对比</p>
+<p>Java 代码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">List&lt;CarMonitor&gt; tempMonitor = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line"><span class="keyword">for</span> (CarMonitor monitor : monitors) &#123;</div><div class="line">   <span class="keyword">for</span> (String code : codes) &#123;</div><div class="line">      <span class="keyword">if</span> (monitor.equalsCode(code)) &#123;</div><div class="line">            tempMonitor.add(monitor);</div><div class="line">      &#125;</div><div class="line">   &#125;</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<p>Kotlin 代码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">val tempMonitor = ArrayList&lt;CarMonitor&gt;()</div><div class="line">codes.forEach &#123; code -&gt;</div><div class="line">    monitors.asSequence()</div><div class="line">            .filter &#123; it.code == code &#125;</div><div class="line">            .forEach &#123; tempMonitor.add(it) &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
 
     
 
@@ -389,21 +413,13 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2017/03/30/AndroidUseKotlin/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2017/03/07/UseConstraintLayout/" id="post_nav-older" class="next-content">
+        <a href="/2017/03/30/AndroidUseKotlin/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
